@@ -568,7 +568,7 @@ export function ReactNativeSnippet({ flagKey, multivariant, payload }: FeatureFl
 
     const flagFunction = multivariant ? 'getFeatureFlag' : 'isFeatureEnabled'
 
-    const variantSuffix = multivariant ? ` == 'example-variant'` : ''
+    const variantSuffix = multivariant ? ` === 'example-variant'` : ''
     return (
         <CodeSnippet language={Language.JSX} wrap>
             {`// With a hook
@@ -600,7 +600,7 @@ export function ReactSnippet({ flagKey, multivariant, payload }: FeatureFlagSnip
         : 'useFeatureFlagEnabled'
 
     const variable = payload ? 'payload' : multivariant ? 'variant' : 'flagEnabled'
-    const variantSuffix = multivariant ? ` == 'example-variant'` : ''
+    const variantSuffix = multivariant ? ` === 'example-variant'` : ''
 
     return (
         <CodeSnippet language={Language.JSX} wrap>
@@ -689,7 +689,7 @@ posthog.${
     const clientSuffix = 'posthog.'
     const flagFunction = multivariant ? 'getFeatureFlag' : 'isFeatureEnabled'
 
-    const variantSuffix = multivariant ? ` == 'example-variant'` : ''
+    const variantSuffix = multivariant ? ` === 'example-variant'` : ''
     return (
         <>
             <CodeSnippet language={Language.JavaScript} wrap>
